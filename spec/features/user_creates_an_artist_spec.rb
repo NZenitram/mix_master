@@ -57,13 +57,13 @@ RSpec.feature "User submits a new artist" do
     end
   end
 
-  scenario "user can delete an artist" do
+  scenario "user can destroy an artist" do
     artist = Artist.create(name: "Jon Denver", image_path: "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg")
 
 
     visit artist_path(artist)
     # save_and_open_page
-    click_on "Destroy"
+    click_on "Delete"
 
     expect(page).to_not have_content "Jon Doe"
   end

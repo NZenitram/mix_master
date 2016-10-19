@@ -1,4 +1,5 @@
 <h1><%= @artist.name %></h1>
 <%= image_tag @artist.image_path %>
-<%= link_to "Edit", edit_artist_path %>
-<%= link_to "Destroy", method: :destroy %>
+<%= link_to "Edit", edit_artist_path(@artist) %>
+<%= link_to "Delete", method: :destroy %>
+<%= link_to "New Song", new_artist_song_path(@artist) %>
